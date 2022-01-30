@@ -43,7 +43,7 @@ const Workout = ({ submitWorkout, handleShowWorkout }) => {
                 </div>
 
                 <div className='submit-workout-button-backgroundcolor'>
-                    <button className='submit-workout-button' onClick={handleSubmitWorkout}>Submit Workout</button>
+                    <button className='submit-workout-button margin-top-20px' onClick={handleSubmitWorkout}>Submit Workout</button>
                 </div>
             </div>
         </div>

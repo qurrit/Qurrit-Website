@@ -59,7 +59,7 @@ export default function Upload_Image({ submitImageUrl }) {
                         null
                     )}
                     <div>
-                        <button onClick={handleSubmission}>Submit</button>
+                        <button className='default-button background-red' onClick={handleSubmission}>Submit</button>
                     </div>
 
 

@@ -248,6 +248,22 @@ nav {
   }
 }
 
+.margin-top-10px {
+  margin-top: 10px;
+}
+
+.margin-top-20px {
+  margin-top: 20px;
+}
+
+.margin-left-20px {
+  margin-left: 20px;
+}
+
+.margin-bottom-20px {
+  margin-bottom: 20px;
+}
+
 .center {
   text-align: center;
 }
@@ -276,6 +292,10 @@ nav {
 
 .background-brandBlue {
   background-color: #3c93e2;
+}
+
+.background-red {
+  background-color: #ff7c7c;
 }
 
 .fontsize-20 {
@@ -1107,13 +1127,13 @@ footer {
 }
 
 .edit-program-info {
-  margin: 0px;
+  margin-right: 20px;
 }
 
 .edit-program-infos {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+
   align-items: center;
   flex-wrap: wrap;
   color: #fff;
@@ -1144,6 +1164,7 @@ footer {
 
 .ex-drop-down {
   color: #0b0c0c;
+  width: 400px;
 }
 
 .exercise-add-button {
@@ -1170,7 +1191,7 @@ footer {
   background-color: #ffda7c;
   border-color: #ffda7c;
   padding: 5px 7px;
-  margin-left: 20px;
+
   margin-bottom: 20px;
 }
 
@@ -1183,9 +1204,9 @@ footer {
 
 .edit-program-button {
   border-radius: 20px;
-  background-color: #2aa134;
-  border-color: #2aa134;
-  padding: 5px 7px;
+  background-color: #8bda92;
+  border-color: #8bda92;
+  padding: 5px 10px;
 }
 
 .submit-program-button-position {
@@ -1217,18 +1238,69 @@ footer {
 }
 
 .submitted-workout-list {
-  background-color: #3c93e2;
+  background-color: #3e4141;
   border-radius: 20px;
-  max-width: 600px;
   padding: 10px;
-  margin-top: 20px;
-  text-align: center;
+  margin: 20px 20px 0px 20px;
+
+  color: #fff;
 }
 
-.razorpay-pay {
+.edit-program-workoutName-flex {
+  display: flex;
+}
+
+.edit-program-workoutName {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-program-workoutName-input {
+  width: 200px;
 }
 
 @media only screen and (max-width: 600px) {
+  .edit-program-info {
+    margin-right: 10px;
+  }
+
+  .edit-program-infos {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  .program-input {
+    width: 70px;
+  }
+
+  .ex {
+    padding: 20px;
+    color: #fff;
+    background-color: #3e4141;
+  }
+
+  .ex-infos {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+  }
+
+  .ex-info {
+    margin: 0px 20px 0px 0px;
+  }
+
+  .ex-drop-down {
+    color: #0b0c0c;
+    width: 83vw;
+  }
+
   .logout-button {
     margin-left: 10px;
   }

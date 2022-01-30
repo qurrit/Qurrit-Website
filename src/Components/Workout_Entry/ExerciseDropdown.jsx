@@ -28,6 +28,7 @@ const ExerciseDropdown = ({ setId }) => {
     return (
         <div>
             <Select
+                className='ex-drop-down'
                 options={exercise_option}
                 placeholder="Select Exercise"
                 isSearchable

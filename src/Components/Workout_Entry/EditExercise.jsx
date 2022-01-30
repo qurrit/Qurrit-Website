@@ -32,58 +32,65 @@ const EditExercise = ({ exercises, handleChange, workoutIndex }) => {
     };
 
     return (
-        <div>
+        <div className='margin-top-20px'>
             {exercises
                 ? exercises.map((exercise, index) => (
-                    <div key={index}>
-                        <span className='edit-program-info'>
+                    <div className='margin-top-20px' key={index}>
+                        <div className='edit-program-info'>
                             Exercise Name :
                             <EditExerciseDropdown
                                 exerciseId={exercise.exerciseId}
                                 exerciseName={exercise.exerciseName}
                                 exerciseChange={(id) => handleExerciseChange(id, index)}
                             />
-                        </span>
+                        </div>
                         <div className='edit-program-infos'>
-                            <span className='edit-program-info'>
-                                Sets :
+                            <div className='edit-program-info'>
+                                <div>
+                                    Sets :
+                                </div>
                                 <input
-                                    className='progrom-input'
+                                    className='program-input'
                                     type="number"
                                     defaultValue={exercise.sets}
                                     onChange={(event) => {
                                         handleSetChange(event, index);
                                     }}
                                 />
-                            </span>
-                            <span className='edit-program-info'>
-                                Reps :
+
+                            </div>
+                            <div className='edit-program-info'>
+                                <div>
+                                    Reps :
+                                </div>
                                 <input
-                                    className='progrom-input'
+                                    className='program-input'
                                     type="number"
                                     defaultValue={exercise.reps}
                                     onChange={(event) => {
                                         handleRepsChange(event, index);
                                     }}
                                 />
-                            </span>
-                            <span className='edit-program-info'>
-                                Rest :
+                            </div>
+                            <div className='edit-program-info'>
+                                <div>
+                                    Rest :
+                                </div>
                                 <input
-                                    className='progrom-input'
+                                    className='program-input'
                                     type="number"
                                     defaultValue={exercise.rest}
                                     onChange={(event) => {
                                         handleRestChange(event, index);
                                     }}
                                 />
-                            </span>
+                            </div>
                         </div>
-                        <span>
-                            <button onClick={() => handleDeleteExercise(index)}>
+                        <div className="margin-top-10px">
+                            <button className='default-button background-red ' onClick={() => handleDeleteExercise(index)}>
                                 Delete Exercise
                             </button>
-                        </span>
+                        </div>
                     </div>
                 ))
                 : null}

@@ -129,19 +129,19 @@ const Program1 = ({ user }) => {
                 </div>
             ) : (
                 <div>
-                    <button className='add-workout-button' onClick={() => setShowWorkout(true)}> Add Workout </button>
+                    <button className='add-workout-button margin-left-20px' onClick={() => setShowWorkout(true)}> Add Workout </button>
                 </div>
             )}
 
 
             <div className='submitted-program'>
-                <div className='submitted-program-title'>Your Submitted Workout</div>
+                <div className='submitted-program-title margin-bottom-20px'>Your Submitted Workout</div>
                 <div className='submit-program-button-position'>
                     <button className='submit-program-button' onClick={handleSubmitProgram}>Submit Program</button>
                 </div>
                 <div>
                     {showEditProgram ? null : (
-                        <button className='add-workout-button' onClick={() => setShowEditProgram(true)}>Edit Program</button>
+                        <button className='add-workout-button margin-left-20px' onClick={() => setShowEditProgram(true)}>Edit Program</button>
                     )}
                 </div>
                 <div>

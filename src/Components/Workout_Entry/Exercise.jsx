@@ -38,7 +38,7 @@ const Exercise = ({ handleExercise }) => {
             <div className='ex-infos'>
                 <div >
                     <div>
-                        Exercise :
+                        Exercise Name:
                     </div>
                     <ExerciseDropdown setId={handleExerciseId} />
                 </div>
@@ -49,6 +49,7 @@ const Exercise = ({ handleExercise }) => {
                         Sets :
                     </div>
                     <input
+                        className='program-input'
                         type="number"
                         onChange={(event) => setSets(event.target.value)}
                     />
@@ -59,6 +60,7 @@ const Exercise = ({ handleExercise }) => {
                         Reps :
                     </div>
                     <input
+                        className='program-input'
                         type="number"
                         onChange={(event) => setReps(event.target.value)}
                     />
@@ -68,6 +70,7 @@ const Exercise = ({ handleExercise }) => {
                         Rest :
                     </div>
                     <input
+                        className='program-input'
                         type="number"
                         onChange={(event) => setRest(event.target.value)}
                     />

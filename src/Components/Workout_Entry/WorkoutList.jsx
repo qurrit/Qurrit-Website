@@ -3,7 +3,7 @@ const WorkoutList = ({ workoutTable }) => {
         <div >
             {workoutTable
                 ? workoutTable.map((workout, index) => (
-                    <p className='submitted-workout-list' key={index}>{workout.workoutName} </p>
+                    <p className='submitted-workout-list center' key={index}>{workout.workoutName} </p>
                 ))
                 : null}
         </div>

@@ -51,7 +51,7 @@ const EditProgram = ({ showEditProgram, workoutData, setWorkoutList }) => {
 
         <div>
             <div>
-                <button className='add-workout-button' onClick={() => showEditProgram(false)}>Edit done</button>
+                <button className='add-workout-button margin-left-20px' onClick={() => showEditProgram(false)}>Edit done</button>
             </div>
             {workoutData
                 ? workoutData.map((workout, index) => (
@@ -61,28 +61,35 @@ const EditProgram = ({ showEditProgram, workoutData, setWorkoutList }) => {
                             <div key={index}>
                                 {console.log('hi')}
                                 <div key={index}>
-                                    Workout Name :{" "}
-                                    <input
-                                        type="text"
-                                        defaultValue={workout.workoutName}
-                                        onChange={(event) => handleWorkoutNameChange(event, index)}
-                                    />
-                                    <button onClick={() => handleDeleteWorkout(index)}>
-                                        Delete Workout
-                                    </button>
+                                    <div className='edit-program-workoutName-flex'>
+                                        <div className='edit-program-workoutName '>
+                                            Workout Name :{" "}
+                                            <input
+                                                className='edit-program-workoutName-input'
+                                                type="text"
+                                                defaultValue={workout.workoutName}
+                                                onChange={(event) => handleWorkoutNameChange(event, index)}
+                                            />
+                                        </div>
+                                        <button className='default-button background-red' onClick={() => handleDeleteWorkout(index)}>
+                                            Delete Workout
+                                        </button>
+                                    </div>
 
                                     <EditExercise
+
                                         exercises={workout.exerciseList}
                                         workoutIndex={index}
                                         handleChange={handleExerciseChange}
                                     />
 
                                 </div>
-
-                                <button className='edit-program-button' onClick={() => unEditIndex(index)}>Close Edit</button>
+                                <div className="center">
+                                    <button className='edit-program-button' onClick={() => unEditIndex(index)}>Close Edit</button>
+                                </div>
                             </div>
-                            : <div>
-                                <p key={index}>{workout.workoutName} </p>
+                            : <div className='center'>
+                                <p className='text-color-white' key={index}>{workout.workoutName} </p>
                                 <button className='edit-program-button' onClick={() => editIndex(index)}>Edit</button>
                             </div>}
                     </div>
