@@ -115,7 +115,7 @@ const LoginPage = ({ handleCookie }) => {
                         </div>
                         <div className='form-inputs'>
                             <label className='form-label'>
-                                Last Name
+                                Password
                             </label>
                             <input
                                 className='form-input'
