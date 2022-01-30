@@ -14,7 +14,7 @@ import Program from './Components/ExerciseInput/Program'
 import ForgotPassword from './Components/Forgot_Password'
 import RazorPay from "./Components/RazorPay";
 import Cookies from 'universal-cookie'
-import { IconName } from "react-icons/fa";
+import { FaWindowRestore, IconName } from "react-icons/fa";
 import ViewProfile from "./Components/ViewProfile";
 import Program1 from "./Components/Workout_Entry/Program1";
 import UserSettings from "./Components/UserSettings";

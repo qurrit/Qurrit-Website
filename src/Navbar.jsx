@@ -29,6 +29,7 @@ const Navbar = ({ loggedInStatus, handleLogout }) => {
         console.log('working')
         handleLogout();
         history("/login")
+        window.location.reload();
 
     }
 

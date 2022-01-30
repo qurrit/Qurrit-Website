@@ -40,6 +40,7 @@ function RazorPay({ id, program_id }) {
                 })
                 .then(() => {
                     history("/profile")
+                    window.location.reload();
                 })
 
 
