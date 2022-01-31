@@ -240,7 +240,7 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
 
                                 j = j + 1;
                                 return (
-                                    <section >
+                                    <section key={j}>
 
                                         <div className={`exercise-infobox ${value > 0 && !bought && 'blur'}`}>
                                             <div className='excercise-number'>{j + 1}</div>
