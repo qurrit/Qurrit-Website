@@ -88,7 +88,6 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
 
     useEffect(() => {
         filterWorkout()
-
     }, [singleWorkout && workouts])
 
     useEffect(() => {
@@ -246,7 +245,7 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
                                             <div className='excercise-number'>{j + 1}</div>
                                             <div>
                                                 <div className='exerciselayout'>
-                                                    <div className='exercisename'>exercise name</div>
+                                                    <div className='exercisename'>{singleWorkout[0][j].name}</div>
                                                     <div className='exercise1-info'>
                                                         <div className='trainer1-infobox-text'>
                                                             <div>reps</div>
