@@ -6,7 +6,7 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
-    const [searchTerm, setSearchTerm] = useState('t')
+    const [searchTerm, setSearchTerm] = useState('a')
     const [workouts, setWorkouts] = useState([])
 
 

@@ -306,6 +306,11 @@ nav {
   height: 60vh;
 }
 
+.qurrit-logo {
+  height: 30px;
+  width: 30px;
+}
+
 .pagination {
   display: flex;
   justify-content: center;

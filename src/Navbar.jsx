@@ -3,6 +3,7 @@ import { links, social } from './data'
 import { Link } from 'react-router-dom'
 import { FaBars, FaWindowClose } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import logo from './Image/logo.jpg';
 
 
 import Cookies from 'universal-cookie'
@@ -39,7 +40,7 @@ const Navbar = ({ loggedInStatus, handleLogout }) => {
             <nav>
                 <div className='nav-center'>
                     <div className='nav-header'>
-                        <div>Qurrit logo</div>
+                        <img className='qurrit-logo' src={logo} ></img>
                         <button className='nav-toggle'
                             onClick={() => setShowLinks(!showLinks)}
                         >{!showLinks ? <i><FaBars /></i> :
