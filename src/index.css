@@ -506,7 +506,7 @@ footer {
 }
 
 .profile-img {
-  background-color: #ffacac;
+  background-color: #3c93e2;
   position: absolute;
   top: 125px;
   margin: 0 auto;
@@ -514,6 +514,14 @@ footer {
   width: 150px;
 
   border-radius: 50%;
+}
+
+.profile-img-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .profile-myWorkouts {

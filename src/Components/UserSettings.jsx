@@ -3,7 +3,7 @@ import Upload_Image from './Upload_Image';
 
 const UserSettings = ({ loggedInStatus, user }) => {
 
-    console.log(user)
+    console.log(user.loginData)
 
     const [values, setValues] = useState({
         id: '',
@@ -113,56 +113,66 @@ const UserSettings = ({ loggedInStatus, user }) => {
         setShowEditImage(!showEditImage)
     }
 
+    if (loggedInStatus === 'LOGGED_IN') {
+        return (
+            <section className='center background-brandLightBlue pageHeight'>
+                <div className='userSettings-text'>User Settings</div>
+                {showEditPassword ?
+                    <form onSubmit={handleEdit}>
+                        <div>
+                            <label>
+                                Current Password
+                            </label>
+                            <input
+                                id='current_password'
+                                type='text'
+                                name='current_password'
+                                placeholder='Enter current password'
+                                value={values.current_password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <label>
+                                New Password
+                            </label>
+                            <input
+                                id='new_password'
+                                type='text'
+                                name='new_password'
+                                placeholder='New password'
+                                value={values.new_password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        {error ? <div>{error}</div> : null}
+                        <button className='default-button background-brandBlack text-color-white' type='submit'>Submit Editted Password</button>
+                    </form> : null}
+                <div>
+                    {!showEditPassword ?
+                        <button className='default-button background-brandBlack text-color-white' onClick={handlePasswordChange}>Edit Password</button>
+                        : <button className='default-button background-brandBlack text-color-white' onClick={handlePasswordChange}>Password Edit Done</button>}
+                </div>
+                <div>
+                    {!showEditImage ?
+                        <button className='default-button background-brandBlack text-color-white' onClick={handleImageChange}>Upload Image</button>
+                        :
+                        <React.Fragment>
+                            <Upload_Image submitImageUrl={submitImageUrl} />
+                            <button className='default-button background-brandBlack text-color-white' onClick={handleImageChange}>Done</button>
+                        </React.Fragment>
+                    }
+                </div>
+                {user.loginData.user_type === 'Trainer' ?
+                    <section>
+                        <div>Wallet:{user.loginData.wallet}</div>
+                        <div>Email us to cash out your wallet and recieve payments</div>
+                        <div>We charge 5% as transaction fee for now.</div>
+                    </section> : null}
 
-    return (
-        <section className='center background-brandLightBlue pageHeight'>
-            <div className='userSettings-text'>User Settings</div>
-            {showEditPassword ?
-                <form onSubmit={handleEdit}>
-                    <div>
-                        <label>
-                            Current Password
-                        </label>
-                        <input
-                            id='current_password'
-                            type='text'
-                            name='current_password'
-                            placeholder='Enter current password'
-                            value={values.current_password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label>
-                            New Password
-                        </label>
-                        <input
-                            id='new_password'
-                            type='text'
-                            name='new_password'
-                            placeholder='New password'
-                            value={values.new_password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    {error ? <div>{error}</div> : null}
-                    <button className='default-button background-brandBlack text-color-white' type='submit'>Submit Editted Password</button>
-                </form> : null}
-            <div>
-                {!showEditPassword ?
-                    <button className='default-button background-brandBlack text-color-white' onClick={handlePasswordChange}>Edit Password</button>
-                    : <button className='default-button background-brandBlack text-color-white' onClick={handlePasswordChange}>Password Edit Done</button>}
-            </div>
-            <div>
-                {!showEditImage ?
-                    <button className='default-button background-brandBlack text-color-white' onClick={handleImageChange}>Upload Image</button>
-                    :
-                    <React.Fragment>
-                        <Upload_Image submitImageUrl={submitImageUrl} />
-                        <button className='default-button background-brandBlack text-color-white' onClick={handleImageChange}>Done</button>
-                    </React.Fragment>
-                }
-            </div>
-        </section>)
+            </section>)
+    } else if (loggedInStatus === 'NOT_LOGGED_IN') {
+        return (<div>not logged in</div>)
+    }
 }
 export default UserSettings;

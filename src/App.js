@@ -59,7 +59,8 @@ function App() {
               user_type: msg.user_type,
               programs: msg.programs_bought,
               user_id: user_id,
-              profile_image: msg.image
+              profile_image: msg.image,
+              wallet: msg.wallet
             }
           }
         })
