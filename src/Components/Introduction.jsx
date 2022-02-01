@@ -12,7 +12,7 @@ export default function Introduction() {
                 <img className='introduction_image1' src={image1} />
                 <div className='introduction_text'>
                     <h2 className='introduction_header_color'>Welcome To Qurrit</h2>
-                    <h3 className='introduction_sub_color '>We are a ONE STOP SHOP for all your WORKOUT needs</h3>
+                    <h1 className='introduction_sub_color '>We are a ONE STOP SHOP for all your WORKOUT needs</h1>
                 </div>
                 <img className='introduction_image2' src={image2} />
             </div>
