@@ -165,7 +165,7 @@ const UserSettings = ({ loggedInStatus, user }) => {
                 </div>
                 {user.loginData.user_type === 'Trainer' ?
                     <section>
-                        <div>Wallet:{user.loginData.wallet}</div>
+                        <div>Wallet:{user.loginData.wallet} INR</div>
                         <div>Email us to cash out your wallet and recieve payments</div>
                         <div>We charge 5% as transaction fee for now.</div>
                     </section> : null}
