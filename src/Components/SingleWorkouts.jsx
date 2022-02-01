@@ -70,7 +70,9 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
             const response = await fetch(`${url}${id}`);
             const newWorkouts = await response.json([]);
             setSingleWorkout(newWorkouts)
-
+            console.log(newWorkouts)
+            console.log(singleWorkout[0][0].exercise_id[0])
+            console.log(singleWorkout[1][singleWorkout[0][0].exercise_id[j] - 1].name)
             setLoading(false);
 
         } catch (error) {
@@ -235,6 +237,7 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
                         </div>
 
                         <div className='exercise-layout'>
+                            <div className='center'>{singleWorkout[0][value].name}</div>
                             {singleWorkout[0][value].sets.map((item1) => {
 
                                 j = j + 1;
@@ -245,7 +248,7 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
                                             <div className='excercise-number'>{j + 1}</div>
                                             <div>
                                                 <div className='exerciselayout'>
-                                                    <div className='exercisename'>{singleWorkout[0][j].name}</div>
+                                                    {<div className='exercisename'>{singleWorkout[1][singleWorkout[0][0].exercise_id[j] - 1].name}</div>}
                                                     <div className='exercise1-info'>
                                                         <div className='trainer1-infobox-text'>
                                                             <div>reps</div>
