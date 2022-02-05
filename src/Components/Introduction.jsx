@@ -19,15 +19,15 @@ export default function Introduction() {
             <div className='website-working-infos'>
                 <div className='website-working-info'>
                     <img className='info_image1' src={image3} />
-                    <div >Top Class Workouts</div>
+                    <div >Create Workouts Using the Best Tool</div>
                 </div>
                 <div className='website-working-info'>
                     <img className='info_image2' src={image4} />
-                    <div>Filter Through  Workouts Below</div>
+                    <div>Users can search through your Workouts</div>
                 </div>
                 <div className='website-working-info'>
                     <img className='info_image2' src={image5} />
-                    <div> Purchase Desired Workout for a Steal</div>
+                    <div> Sell your Workouts Worldwide</div>
                 </div>
             </div>
         </section>
