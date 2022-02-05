@@ -30,7 +30,7 @@ function Workouts() {
     }
 
     if (workouts.length < 1) {
-        return (<div>search</div>)
+        return (<div className='center background-brandLightBlue padding-20px'>This is not available, search for another workout</div>)
     }
 
     return (

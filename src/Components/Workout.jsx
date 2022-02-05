@@ -5,12 +5,15 @@ import { Link } from 'react-router-dom'
 const Workout = ({ program_name, duration, trainer_name, id, image }) => {
 
 
+
     return (
         <div className='grid-item '>
             <div className='grid-workouts-header'>{program_name}</div >
             <div className='grid-workouts-image'>
                 <div className="workout-image contain">
-                    <img className='workout-image' src={image} />
+                    {image ? <img className='workout-image' src={image} /> :
+                        <img className='workout-image' src={'https://res.cloudinary.com/de421a273/image/upload/v1644069740/vmlp6dr49xsg8nifh3kk.png'} />}
+
                 </div>
             </div>
 
