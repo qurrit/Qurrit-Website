@@ -110,7 +110,7 @@ const FormSignup = ({ submitForm }) => {
                     <option value="Customer">Looking for Workout</option>
                     <option value="Trainer">Trainer, looking to create workout</option>
                 </select>
-                {errors.user_type && <p>{errors.user_type}</p>}
+                {errors.user_type && <p className='text-color-red'>{errors.user_type}</p>}
                 <button className='form-input-btn' type='submit'>Sign Up</button>
 
             </form>

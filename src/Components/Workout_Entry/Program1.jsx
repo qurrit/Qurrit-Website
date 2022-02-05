@@ -123,7 +123,7 @@ const Program1 = ({ user }) => {
                         </div>
                         <div className='program-info'>
                             <div>
-                                Duration
+                                Duration (in months)
                             </div>
                             <input
                                 type="number"
@@ -133,7 +133,7 @@ const Program1 = ({ user }) => {
                         </div>
                         <div className='program-info'>
                             <div>
-                                Cost
+                                Cost (in INR)
                             </div>
                             <input
                                 type="number"

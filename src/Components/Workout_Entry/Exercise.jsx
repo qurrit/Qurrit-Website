@@ -67,7 +67,7 @@ const Exercise = ({ handleExercise }) => {
                 </div>
                 <div className='ex-info'>
                     <div>
-                        Rest :
+                        Rest (in seconds) :
                     </div>
                     <input
                         className='program-input'
