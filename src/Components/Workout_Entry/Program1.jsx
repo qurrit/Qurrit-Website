@@ -27,6 +27,8 @@ const Program1 = ({ user }) => {
 
     const [imageURL, setImageURL] = useState('')
 
+    const [description, setDescription] = useState('')
+
     const handleProfile = () => {
         history("/profile")
         window.location.reload();
@@ -44,7 +46,8 @@ const Program1 = ({ user }) => {
             cost: cost,
             workoutList: workoutList,
             trainerId: trainerId,
-            imageURL: imageURL
+            imageURL: imageURL,
+            description: description
         });
     }, [programName, trainerName, duration, cost, workoutList, trainerId]);
 
@@ -60,6 +63,7 @@ const Program1 = ({ user }) => {
         } else if (cost === 0 || !cost) {
             alert("Enter Cost");
         } else {
+            console.log(programData)
             await fetch("https://qurrit-react.herokuapp.com/api/programs/create", {
                 method: "POST",
                 headers: {
@@ -147,6 +151,18 @@ const Program1 = ({ user }) => {
                             </div>
                             <Upload_Image submitImageUrl={setImageURL} />
                         </div>
+                    </div>
+                    <div className='center'>
+                        <div className='text-color-white'>
+                            Description for Workout
+                        </div>
+                        <textarea
+                            className='description-input'
+                            maxLength={1000}
+                            type="text"
+                            onChange={(event) => setDescription(event.target.value)}
+                            placeholder="Fill in whether the workout should be repeated or information about progressive overload."
+                        />
                     </div>
 
 

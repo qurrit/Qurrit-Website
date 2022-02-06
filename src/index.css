@@ -494,6 +494,12 @@ footer {
   color: #27bcda;
 }
 
+.description-input {
+  width: 800px;
+  height: 200px;
+  padding: 20px;
+}
+
 @media (max-width: 500px) {
   .footer-bottom p {
     float: none;
@@ -697,6 +703,12 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .description-input {
+    width: 80vw;
+    height: 200px;
+    padding: 20px;
+  }
+
   .profile-myworkouts-text {
     text-align: center;
     padding-top: 100px;
