@@ -45,7 +45,7 @@ export default function ValidateInfo(values, userData) {
     if (!values.password2) {
         errors.password2 = 'Password Required'
     } else if (values.password !== values.password2) {
-        errors.password2 = 'Passwords do no match'
+        errors.password2 = 'Passwords do not match'
     }
 
     if (!values.user_type) {

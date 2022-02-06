@@ -68,7 +68,7 @@ const Navbar = ({ loggedInStatus, handleLogout }) => {
             <nav>
                 <div className='nav-center'>
                     <div className='nav-header'>
-                        <div>Qurrit logo</div>
+                        <img className='qurrit-logo' src={logo} ></img>
                         <button className='nav-toggle'
                             onClick={() => setShowLinks(!showLinks)}
                         >{!showLinks ? <i><FaBars /></i> :
