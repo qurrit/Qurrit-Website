@@ -88,8 +88,8 @@ function RazorPay({ id, program_id }) {
         //that has been made by the user
 
         var options = {
-            key_id: "rzp_test_P0KpU2wi1sqrm9", // in react your environment variable must start with REACT_APP_
-            key_secret: "2xYnfOIcCBux1TlBRM99Ebvy",
+            key_id: "rzp_live_mVIIEneiAN36tn", // in react your environment variable must start with REACT_APP_
+            key_secret: "xdp4XcZqydO69ESPF0wc5DdV",
             amount: data.data.payment.amount,
             currency: "INR",
             name: "Qurrit",
