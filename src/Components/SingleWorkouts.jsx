@@ -167,7 +167,8 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
                         <div className='trainerInfoGrid'>
                             <div className='trainerPictureBox'>
                                 <div className="trainerpage-image cover">
-                                    <img src={(workout[0][0].image)} />
+                                    {workout[0][0].image ? <img className='workout-image' src={workout[0][0].image} /> :
+                                        <img className='workout-image' src={'https://res.cloudinary.com/de421a273/image/upload/v1644069740/vmlp6dr49xsg8nifh3kk.png'} />}
                                 </div>
                                 <div className='single-workout-cost-view'>
                                     <div className='single-workout-cost'>
@@ -233,7 +234,7 @@ function SingleWorkouts({ loggedInStatus, user, setTempProgramId }) {
                         </div>
 
                         <div className='exercise-layout'>
-                            <div className='center'>{singleWorkout[0][value].name}</div>
+                            <div className='center title-underline-text'>{singleWorkout[0][value].name}</div>
                             {singleWorkout[0][value].exercise_id.map((item1) => {
 
                                 j = j + 1;

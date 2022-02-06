@@ -709,6 +709,15 @@ footer {
     padding: 20px;
   }
 
+  .title-underline-text {
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline #4796f3;
+    text-underline-position: under;
+    text-decoration-thickness: 4px;
+    margin-bottom: 20px;
+  }
+
   .profile-myworkouts-text {
     text-align: center;
     padding-top: 100px;
@@ -934,6 +943,12 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .exercisename {
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+  }
+
   .trainer-infobox-text {
     font-size: 20px;
     background-color: #c9e1f8;
