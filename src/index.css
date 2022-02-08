@@ -282,6 +282,13 @@ nav {
   border-radius: 5px;
 }
 
+.default-button-rounded {
+  padding: 3px;
+  margin: 3px;
+  border-radius: 15px;
+  border: none;
+}
+
 .text-color-white {
   color: #fff;
 }
@@ -658,7 +665,7 @@ footer {
 }
 
 .website-working-infos {
-  padding: 40px;
+  padding: 10px 40px 40px 40px;
   display: flex;
   justify-content: center;
   background-color: #3e4141;
@@ -680,7 +687,7 @@ footer {
   background-color: #1c1e1d;
   text-align: center;
   height: 200px;
-  margin: 40px 20px 0px 20px;
+  margin: 0px 20px 0px 20px;
   padding: 30px 20px;
   border-radius: 20px;
   color: #fff;
@@ -780,7 +787,7 @@ footer {
     text-align: center;
     height: 120px;
     font-size: 12px;
-    margin: 5px 5px 0px 5px;
+    margin: 0px 5px 0px 5px;
     padding: 5px 5px;
     border-radius: 20px;
     color: #fff;
@@ -789,7 +796,7 @@ footer {
   }
 
   .website-working-infos {
-    padding: 40px;
+    padding: 10px 40px 40px 40px;
     display: flex;
     justify-content: center;
     background-color: #3e4141;
@@ -1078,7 +1085,9 @@ footer {
 
 .grid-item {
   display: inline-grid;
-
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 50px 100px -20px,
+    rgb(204, 208, 209) 0px 30px 60px -30px,
+    rgb(253, 247, 247) 0px -2px 6px 0px inset;
   background-color: #3e4141;
   border-radius: 20px;
   display: grid;
