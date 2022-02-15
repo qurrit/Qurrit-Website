@@ -9,6 +9,7 @@ const useForm = (callback, validate) => {
         try {
             const response = await fetch('/accounts/isexist')
             const userInfo = await response.json()
+            console.log(userInfo)
             setUserData(userInfo)
 
         } catch (error) {
