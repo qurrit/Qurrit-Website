@@ -7,9 +7,8 @@ const useForm = (callback, validate) => {
 
     const fetchUserData = async () => {
         try {
-            const response = await fetch('/accounts/isexist')
+            const response = await fetch('https://qurrit-react.herokuapp.com/accounts/isexist')
             const userInfo = await response.json()
-            console.log(userInfo)
             setUserData(userInfo)
 
         } catch (error) {
