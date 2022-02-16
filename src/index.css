@@ -1074,7 +1074,7 @@ footer {
 .grid-container {
   display: grid;
   padding-top: 50px;
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(auto-fit, 300px);
 
   grid-row-gap: 58px;
   grid-column-gap: 70px;
@@ -1088,8 +1088,8 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 50px 100px -20px,
     rgb(204, 208, 209) 0px 30px 60px -30px,
     rgb(253, 247, 247) 0px -2px 6px 0px inset;
-  background-color: #3e4141;
-  border-radius: 20px;
+  background-color: #131516;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 25px;
@@ -1105,10 +1105,12 @@ footer {
   text-align: center;
   align-items: center;
   grid-row: 1;
-  height: 3rem;
-  line-height: 3rem;
-
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 20px;
+  min-height: 50px;
   border-radius: 20px 20px 0px 0px;
+  color: #c9e1f8;
 }
 
 .grid-workouts-image {
@@ -1116,13 +1118,13 @@ footer {
   grid-column: 1/3;
   grid-row: 2;
   height: 300px;
-  width: 330px;
+  width: 280px;
   border-radius: 20px;
   margin-left: 10px;
 }
 
 .workout-image img {
-  width: 330px;
+  width: 250px;
   height: 300px;
 }
 
@@ -1157,17 +1159,27 @@ footer {
 }
 
 .grid-button-container {
-  background-color: #85d3ff;
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 20px;
+  background-color: #4796f3;
+
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 10px;
   text-align: center;
   margin-right: 30px;
+  font-size: 20px;
 }
 
-.grid-program-name {
+.grid-button-container-font {
+  color: #1c1e1d;
+}
+
+.grid-program-name-font {
+  font-size: 18px;
+  line-height: 18px;
   text-align: center;
+  font-family: "Roboto Slab";
+  color: #b7b4b4;
 }
 
 .grid-duration {
@@ -1177,9 +1189,10 @@ footer {
 
 .grid-trainername {
   text-align: center;
-  height: 30px;
-  line-height: 30px;
-  font-size: 20px;
+  line-height: 18px;
+  font-size: 18px;
+  font-family: "Roboto Slab";
+  color: #b7b4b4;
 }
 
 .programs {
@@ -1430,9 +1443,12 @@ footer {
   }
 
   .grid-workouts-header {
-    font-size: 15px;
-    height: 30px;
-    line-height: 30px;
+    font-size: 14px;
+    min-height: 28px;
+    line-height: 14px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-top: 2px;
   }
   .grid-workouts-image {
     height: 150px;
@@ -1463,7 +1479,7 @@ footer {
   }
 
   .grid-button-container {
-    background-color: #85d3ff;
+    background-color: #4796f3;
     width: 30px;
     height: 15px;
     line-height: 15px;
@@ -1473,9 +1489,10 @@ footer {
     margin-right: 10px;
   }
 
-  .grid-program-name {
+  .grid-program-name-font {
     text-align: center;
-    font-size: 15px;
+    font-size: 12px;
+    line-height: 12px;
   }
 
   .grid-duration {
@@ -1485,8 +1502,8 @@ footer {
 
   .grid-trainername {
     text-align: center;
-    height: 15px;
-    line-height: 15px;
+
+    line-height: 10px;
     font-size: 10px;
   }
 
