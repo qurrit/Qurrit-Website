@@ -1,6 +1,6 @@
 {
   "name": "test-components",
-  "proxy": "https://qurrit-react.herokuapp.com",
+  "proxy": "https://qurrit.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
